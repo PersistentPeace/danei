@@ -1,0 +1,21 @@
+/*文本颜色：红色；字体大小：24px；*/
+div{
+  color: red;
+  font-size: 24pt;
+}
+/*文本颜色：绿色；字体大小：18pt；*/
+p{
+  color: green;
+  font-size: 18pt;
+}
+h2{
+  color: green;
+  background-color: silver;
+  font-size: 16pt;
+}
+
+h3{
+  color: yellow;
+  font-size: 10pt;
+  background-color: silver;
+}
