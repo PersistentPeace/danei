@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>test</title>
 </head>
 <body>
   <!-- <div id="header">网页头部</div>
@@ -17,6 +17,76 @@
   <section>网页主体</section>
   <footer>网页底部</footer>
   <!-- 限制最大字数 -->
-  <input type="text" maxlength="10">
+  <input type="text"  maxlength="10"><br>
+  <!-- readonly 只读 -->
+  <input type="text" maxlength="10" readonly><br>
+    <!-- disabled 禁用 -->
+  <input type="text" maxlength="10" disabled><br>
+  <!-- 文本框和密码框的命名 -->
+  用户名：<input type="text" name="txtUsername" value="请输入您的名称"><br>
+  密码：<input type="password" name="txtUserpwd"><br>
+  用户昵称：<input type="text" name="txtUsernickname"><br>
+  <!-- 单选按钮复选框 -->
+  用户性别：
+  <input type="radio" value="nan" name="rdoGender" checked>男
+  <input type="radio" value="nv" name="rdoGender">女<br>
+  <fieldset>
+    <legend>用户爱好：</legend> 
+      <input type="checkbox" name="hobbit" value="eat" checked>吃
+      <input type="checkbox" name="hobbit" value="drink">喝
+      <input type="checkbox" name="hobbit" value="play">玩
+      <input type="checkbox" name="hobbit" value="happy">乐
+  </fieldset>
+    <!-- 各种按钮 -->
+  <input type="submit">
+  <input type="submit" value="起飞"><br>
+  <input type="reset">
+  <input type="reset" value="归零"><br>
+  <input type="button">
+  <input type="button" value="普通按钮"><br>
+  <!-- 隐藏域 -->
+  <input type="hidden" name="txtUsernID" value="1e1413414"><br>
+  <!-- 选择框 -->
+  选择文件：<input type="file" name="txtUserImg" ><br>
+  <!-- 文本域 -->
+  自我介绍：<br>
+  <textarea name="txtUserIntro"  cols="30" rows="10">这家伙很懒，什么都没有留下。所以快点写吧，会变聪明哦</textarea>
+  <!-- select -->
+  <select name="selCity">
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="tj" selected>天津</option>
+    <option value="cq">重庆</option>
+  </select>
+  <select name="selCity" size="2">
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="tj">天津</option>
+    <option value="cq">重庆</option>
+  </select>
+  <select name="selCity" multiple size="2">
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="tj">天津</option>
+    <option value="cq">重庆</option>
+  </select><br>
+  <!-- 浮动框架 -->
+  <iframe src="test2.html" width="500px" height="500px" frameborder="0">
+    对不起，该浏览器不支持iframe标记
+  </iframe><br>
+  <!-- 摘要与细节 -->
+  <details>
+    <summary>用户信息</summary>
+    姓名：<input type="text">
+    年龄：<input type="text">
+  </details>
+  <!-- 度量元素 -->
+  当前电量：
+  <meter min="0" max="100" value="50">该浏览器不支持meter元素</meter><br>
+  <!-- 时间元素 -->
+  明年的<time datetime="2017-2-14T14:14:14 ">情人节</time>，我请你吃饭
+  <p>
+    这是一段高亮<mark>的</mark>文本
+  </p>
 </body>
 </html>

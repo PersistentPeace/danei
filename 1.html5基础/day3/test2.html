@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>test2</title>
+</head>
+<body>
+  <h2>修改个人信息</h2>
+  <form method="GET">
+    <!-- action不写，默认会提交到本页 -->
+    <table border="1px" cellspacing="0px" cellpadding="5px">
+      <tr>
+        <td>姓名：</td>
+        <td>
+          <input type="text" name="txtUserName" value="mary">
+        </td>
+        <td valign="top" rowspan="7" width="200px">
+          <details>
+            <summary>各项<mark>技能</mark>指数</summary><br>
+            HTML：<meter title="100%"min="0" max="100" value="100" align="center">浏览器不支持</meter><br>
+            CSS3：<meter title="90%" min="0" max="100" value="90">浏览器不支持</meter><br>
+            AJAX：<meter title="50%" min="0" max="100" value="50">浏览器不支持</meter>
+          </details>
+        </td>
+      </tr>
+      <tr>
+        <td width="100px">性别：</td>
+        <td width="300px">
+          <input id="rdoFemale" type="radio" name="rdoGender" value="1" checked>
+          <label for="rdoFemale">女士</label>
+          <input id="rdoMale" type="radio" name="rdoGender" value="2">
+          <label for="rdoMale">男士</label>
+        </td>
+      </tr>
+      <tr>
+        <td>学历：</td>
+        <td>
+          <select name="selEdu">
+            <option value="0">高中</option>
+            <option value="1">大专</option>
+            <option value="2">本科</option>
+            <option value="3">研究生</option>
+            <option value="4" selected>其他</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>意向工作城市：</td>
+        <td>
+          <select name="selCity" size="5" multiple>
+            <option value="bj">北京</option>
+            <option value="sh">上海</option>
+            <option value="nj">南京</option>
+            <option value="sz">深圳</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          个人描述：
+        </td>
+        <td>
+          <textarea name="txtIntro" cols="30" rows="10">简单描述自己...</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input id="chkPub" type="checkbox" name="chkPrivacy">
+          <label for="chkPub">不要公开我的个人信息</label>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <!-- <input type="submit" value="保存"> -->
+          <button>保存</button>
+          <input type="reset" value="重填">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
