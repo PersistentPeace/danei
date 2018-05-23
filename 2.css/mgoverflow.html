@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #d1,#d2{
+      height: 200px;
+      width: 200px;
+      background-color: red;
+    }
+    #d2{
+      background-color: blue;
+      /* 父元素增加边框解决外溢 */
+      /* border-top: 10px solid #000; */
+      /* 但是这样就会增加父元素的大小 */
+    }
+    #d3{
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      /* 给d3加20px的上外边距 */
+      margin-top: 20px;
+      /* 结果可见外边距加到d2上面了，这就是外边距溢出 */
+    }
+    input{
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2">
+      <!-- 解决溢出，在d3前加点东西拦一下 -->
+      <table></table>
+      <div id="d3"></div>
+    </div>
+
+    <a href="http://www.baidu.com">百度</a>
+    用户名称：<input>
+</body>
+</html>

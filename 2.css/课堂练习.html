@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #comment{
+      width: 100%;
+      min-height: 100px;
+      /* 最小高度，最大不限，自适应 */
+      border: 1px solid #D0E4C2;
+    }
+    #pages{
+      margin-top: 10px;
+      /* border:1px solid yellow; */
+      /* margin-top: 26px;
+      margin-left: 42px; */
+    }
+    #pages>a{
+      border:1px solid #ccc;
+      border-radius: 5px;
+      /* 行内元素不能改尺寸，所以不能加高 */
+      padding: 3px 10px;
+      /* margin-top: 23px; */
+    }
+    #pages a.current{
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="comment"></div>
+  <div id="pages">
+    <a class="current">1</a>
+    <!-- a标签不加href就相当于一个单独的1 -->
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+  </div>
+
+  
+</body>
+</html>
