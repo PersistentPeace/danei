@@ -1,0 +1,66 @@
+/* 有边框给内边距 */
+#comment{
+  border: 1px solid #000;;
+  padding:10px;
+}
+
+.topic{
+  border-bottom: 1px solid #000;
+  padding:5px;
+}
+
+.start5{
+  width: 74px;
+  height: 14px;
+  /* border: 1px solid #000; */
+  background: url(imgs/iconlist_1.png) -109px -239px;
+}
+
+#comment b{
+  background: #FBECD3;
+  padding:5px 10px;
+  margin: 0 3px;
+}
+#pages{
+  padding: 10px;
+}
+#pages>a{
+  border: 1px solid #000;;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 0 3px;
+}
+#pages a:hover{
+  background-color: blue;
+  color:#fff;
+}
+#pages .page1{
+  border: 1px solid transparent;
+}
+#pages .page1:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+#comment button {
+  /* 宽高、边框、倒角、渐变边距、外边距 */
+  width: 82px;
+  height: 38px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px; 
+  background-image: linear-gradient(180deg, #f9f9f9, #cdcdcd);
+  margin-right: 10px;
+}
+span.button{
+  font-size: 13px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  padding: 10px 18px 9px;
+  background-image: linear-gradient(to bottom,#f9f9f9, #cdcdcd);
+  margin-right: 10px;  
+  
+}
+span.button:hover{
+  border: 2px solid #91B3EA;
+  border-radius: 3px;
+}
