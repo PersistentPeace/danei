@@ -1,0 +1,25 @@
+body {
+  font-size: ;
+}
+
+#discuss .mt {
+  width: 990px;
+  height: 53px;
+  border: 1px solid #E1E1E1;
+  border-top: 2px solid #9A9A9A;
+  background-color: #F7F7F7;
+}
+
+#discuss-content> .row1 td {
+  font-weight: bold;
+}
+
+.test {
+  line-height: 21px;
+}
+
+.test>i {
+  padding-left: 50px;
+  /* padding-top: 5px; */
+  background-color: red;
+}
