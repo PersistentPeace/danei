@@ -1,25 +1,76 @@
-body {
-  font-size: ;
+body{
+  font-size: 12px;
+}
+#discuss {
+  width: 990px;
 }
 
-#discuss .mt {
-  width: 990px;
-  height: 53px;
+#discuss div.mt {
+  height: 30px;
   border: 1px solid #E1E1E1;
   border-top: 2px solid #9A9A9A;
   background-color: #F7F7F7;
 }
 
-#discuss-content> .row1 td {
+#discuss-content {
+  border-bottom: 1px solid #E4E4E4;
+}
+
+/* table里面的样式 */
+
+#discuss-datas {
+  width: 990px;
+  /* table里面的文字都是默认左对齐 */
+}
+
+#discuss-datas thead td {
+  /* 我写的选择器thead>tr>td */
+  /* 分析：顏色、文本加粗，下边框、上下边内边距、文本水平对齐方式 */
+  color: #616C86;
   font-weight: bold;
+  border-bottom: 1px solid #E7DFE7;
+  padding: 5px 0px;
+  text-align: center;
+  /* 文本的樣式table中也可以用 */
+}
+#discuss-datas i{
+  /* 设置宽高，背景属性 */
+  padding-left: 21px;
+  padding-top:1px;
+  padding-bottom: 2px;
+  /* 给padding-bottom和padding-top效果不一样 */
+  margin-right: 5px;
+  background:url(imgs/iconlist_1.png) no-repeat
+  
+}
+#discuss-datas i.shai{
+  background-position: -110px -220px;
 }
 
-.test {
-  line-height: 21px;
+#discuss-datas i.lun{
+  background-position: -150px -220px;
+}  
+
+#discuss-datas td.col1 {
+  /* 这么选择的原因是这个类的样式等下还要套用到其他行里面 */
+  /* 宽度、文本左对齐 */
+  width: 600px;
+  text-align: left;
 }
 
-.test>i {
-  padding-left: 50px;
-  /* padding-top: 5px; */
-  background-color: red;
+#discuss-datas tbody td {
+  /* 文本居中对齐、上下内边距、虚线下边框 */
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 1px dotted #ddd;
+  color: #9c9a9c;
+  /* 这里改的颜色不会影响到a，因为浏览器给a设置的a的颜色，a不会受到继承关系的影响。a的样式只能重新指定。 */
+}
+#discuss-datas a{
+  /* 文本颜色，取消下滑下 */
+  color:#005aa0;
+  text-decoration: none;
+}
+#discuss-datas a:hover{
+  text-decoration: underline;
 }

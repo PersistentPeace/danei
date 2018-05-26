@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #d1,#d2,#d3{
+      width: 200px;
+      height: 200px;
+    }
+    #d1{
+      background: red;
+      float: left;
+    }
+    #d2{
+      background: green;
+      float: left;
+    }
+    #d3{
+      background: blue;
+      /* 清除左浮动,注意这是清理上面的浮动带来的影响 */
+      clear: left;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <div id="d3"></div>
+</body>
+</html>

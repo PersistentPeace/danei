@@ -18,64 +18,71 @@
     <!-- 内容 -->
     <div  id="discuss-content">
       <table id="discuss-datas">
-        <tr class="row1">
-          <td>主题</td>
-          <td>回复/浏览</td>
-          <td>作者</td>
-          <td>时间</td>
-        </tr>
-        <tr>
-          <td>
-            <i></i>
-            <a href="#">好大一瓶，不错</a>
-          </td>
-          <td>0/0</td>
-          <td>
-            <a href="#">2010年冬天</a>
-          </td>
-          <td>
-            2014-11-19 13:54：40
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <i></i>
-            <a href="#">好大一瓶，不错</a>
-          </td>
-          <td>0/0</td>
-          <td>
-            <a href="#">2010年冬天</a>
-          </td>
-          <td>
-            2014-11-19 13:54：40
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <i></i>
-            <a href="#">好大一瓶，不错</a>
-          </td>
-          <td>0/0</td>
-          <td>
-            <a href="#">2010年冬天</a>
-          </td>
-          <td>
-            2014-11-19 13:54：40
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <i></i>
-            <a href="#">好大一瓶，不错</a>
-          </td>
-          <td>0/0</td>
-          <td>
-            <a href="#">2010年冬天</a>
-          </td>
-          <td>
-            2014-11-19 13:54：40
-          </td>
-        </tr>
+      <!-- table不是块级元素，宽度不会与div一样，所以要让两者一样，必须手动改 -->
+        <thead>
+          <tr>
+            <td class="col1">主题</td>
+            <!-- 分析：由于第一列的样式都是一样，考虑使用一个类，然后套用在第一列下面的行中 -->
+            <td>回复/浏览</td>
+            <td>作者</td>
+            <td>时间</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col1">
+              <i class="shai"></i>
+              <a href="#">好大一瓶，不错</a>
+            </td>
+            <td>0/0</td>
+            <td>
+              <a href="#">2010年冬天</a>
+            </td>
+            <td>
+             2014-11-19 13:54：40
+            </td>
+          </tr>
+          <tr>
+            <td class="col1">
+              <i class="lun"></i>
+              <a href="#">好大一瓶，不错</a>
+            </td>
+            <td>0/0</td>
+            <td>
+              <a href="#">2010年冬天</a>
+            </td>
+            <td>
+              2014-11-19 13:54：40
+            </td>
+          </tr>
+          <tr>
+            <td class="col1">
+              <i class="lun"></i>
+              <a href="#">好大一瓶，不错</a>
+            </td>
+            <td>0/0</td>
+            <td>
+              <a href="#">2010年冬天</a>
+            </td>
+            <td>
+              2014-11-19 13:54：40
+            </td>
+          </tr>
+          <tr>
+            <td class="col1">
+              <i class="shai"></i>
+              <a href="#">好大一瓶，不错</a>
+            </td>
+            <td>0/0</td>
+            <td>
+              <a href="#">2010年冬天</a>
+            </td>
+            <td>
+              2014-11-19 13:54：40
+            </td>
+          </tr>
+        </tbody>
+          
       </table>
     </div>
   </div>
