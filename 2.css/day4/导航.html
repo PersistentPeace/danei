@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="导航.css">
+</head>
+<body>
+  <nav id="nav">
+    <p>
+      <!-- 这里由于p有默认的外边距，nav又没有外边框，且p是第一个元素，所以外边距溢出。 -->
+      <a href="#">全部商品分类</a>
+      <span></span>
+    </p>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">服装城</a></li>
+      <li><a href="#">食品</a></li>
+      <li><a href="#">团购</a></li>
+      <li><a href="#">夺宝岛</a></li>
+      <li><a href="#">闪购</a></li>
+      <li><a href="#">金融</a></li>
+    </ul>
+  </nav>
+  <div id="category">
+    <!-- 不能直接放列表，因为nav给了margin：auto； 
+    给div之后，要这个div也设置一个宽度，让这个div和nav对齐
+    否则你动了浏览器，ul的属性也会跟着动-->
+    <ul id="cate_box">
+      <li>
+        <a href="#">图书、音像、数字商品</a>
+        <div class="cate_box_meum"></div>
+      </li>
+      <li><a href="#">家用电器</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -12,6 +12,35 @@ body{
   background-color: #F7F7F7;
 }
 
+#discuss>div.mt>a{
+  /* border: 1px solid #000; */
+  float: left;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #0D4778;
+}
+#discuss>div.mt>a:hover{
+  color: #C30D0A;
+}
+
+#discuss div.mt a.sd{
+  color: #C30D0A;
+  margin-top: -5px;
+  background-color: #fff;
+  height: 34px;
+  /* 我的写法 */
+  /* border-top: 2px solid #D50000;
+  border-left: 1px solid #E1E1E1;
+  border-right: 1px solid #E1E1E1; */
+  /* 老师的写法：思想还是先写共性，在写异常 */
+  border: 1px solid #dcdcdc;
+  border-top: 2px solid #f00;
+  border-bottom: 0;
+}
 #discuss-content {
   border-bottom: 1px solid #E4E4E4;
 }
