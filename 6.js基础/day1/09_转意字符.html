@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 脚本解释引擎中：使用\n表示换行
+    console.log("hello\nworld");
+    // console.log("hello <br> world")这样写不行，因为console.log("")是脚本解释引擎
+
+    // 内容排版引擎中：使用<br>表示换行
+    document.write("hello <br> world");
+    // 对于docment.write来说，是通过排版引擎来解析，所以这里hello word会换行显示
+    //document.write("hello\nworld");这么写也表示换行，相当于在HTML中敲一个回车，最后会被解析成为一个空格。所以真要换行，只能写<br>
+  </script>
+  hello
+  world
+</body>
+</html>

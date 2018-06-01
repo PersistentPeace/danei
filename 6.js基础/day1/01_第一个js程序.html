@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="console.log('让你点你就点啊');">点我一下</button>
+  <!-- 双引号里面要是想继续使用双引号，必须用单引号取代 -->
+  <!-- 效果会出现在控制台上，不会出现在页面上。 -->
+  <div onclick="console.log('单机div')">点击一下</div>
+
+  
+  <!-- script元素中嵌入js脚本 -->
+  <script>
+    document.write("<h1>被排版引擎所执行的内容</h1>");
+    // 会直接在页面中打印双引号里面的内容
+    // h1里面的东西是被排版引擎所执行的，所以在页面中会出现加粗的文字
+  </script>
+
+  <!-- 引入外部js文件 -->
+  <script src="a.js">
+    // 注意，引入的script里面不能写js代码
+  </script>
+</body>
+</html>

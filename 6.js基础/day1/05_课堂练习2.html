@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- script元素中声明三个变量，一个用来保存一种汉堡的名称，一个用来保存配餐的名称，一个用来保存饮料的名称 -->
+  <script>
+    var humberger="奥尔良鸡腿堡";
+    var compoundFood="小鸡腿";
+    var drink="可口可乐";
+
+    
+    // 在script中追加程序，输出套餐名称及其内容：
+    document.write("套餐名称");
+    document.write(humberger);
+    document.write("套餐内容") ;
+    document.write(humberger,compoundFood,drink);//多个内容可以写在一行
+
+
+    // 尝试为一个未声明过的变量赋值，再输出该变量的值，观察运行结果
+    stuAge = 39; //不加var声明不错，但是他是一个全局变量。
+    document.write(stuAge);
+
+    // 尝试输出一个未声明过的变量的值，观察运行结果
+    document.write("zhangsanfeng");
+  </script>
+</body>
+</html>

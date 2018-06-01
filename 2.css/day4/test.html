@@ -6,30 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    #d1,#d2,#d3{
-      width: 200px;
-      height: 200px;
+    div{
+      width: 100px;
+      height: 100px;
+      float: left;
     }
     #d1{
+      height: 101px;
       background: red;
-      float: right;
     }
     #d2{
       background: green;
-      float: right;
     }
     #d3{
       background: blue;
-      float: right;
     }
     #d4{
-      clear: both;
+      height: 101px;
+      background: yellow;
+    }
+    #d5{
+      background: pink;
+    }
+    #d6{
+      background: blueviolet;
     }
     #parent{
+      width: 300px;
+      height: 300px;
       border: 1px solid #000;
     }
-
-    </style>
+    p{
+      background: orange;
+      width: 30px;
+    }
+  </style>
 </head>
 <body>
   <div id="parent">
@@ -37,6 +48,9 @@
     <div id="d2"></div>
     <div id="d3"></div>
     <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
   </div>
+
 </body>
 </html>

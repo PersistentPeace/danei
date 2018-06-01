@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 创建一个<script></script>元素，在页面上以红色打印自己的姓名
+  <script>
+    document.write("<span>姚伟</span>")
+  </script> -->
+
+<!-- 老师的写法 ，注意双引号里面是单引号-->
+  <script>
+    document.write("<p style='color:red;'>三丰.张</p>")
+  </script>
+  
+
+  <!-- 如果没说是事件的时候，使用js脚本都要加上script标签 -->
+  <!-- 添加一个按钮，为按钮添加单机事件，在控制台中打印出自己的姓名 
+  注意,js里面是严格区分大小写的-->
+  <button onclick="console.log('姚伟')">点击一下</button>
+
+  <!-- 使用外部脚本文件，在HTML中实现上面两步 -->
+  <script src="b.js"></script>
+
+</body>
+</html>
