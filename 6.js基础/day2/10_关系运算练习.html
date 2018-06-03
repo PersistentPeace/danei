@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1、判断奇数，偶数，请用户输入一个数字，将数字%2，如果返回1，说明是奇数，否则为偶数
+    var num = prompt("请输入一个数字");
+    // 这里得到的是一个字符串
+    num % 2//这里会进行隐式转换
+    var isOdd = num%2==1;
+    var isEven = num%2==0;
+    console.log(num+"是奇数吗?"+isOdd);
+    console.log(num+"是偶数吗?"+isEven);
+
+    //2、比较价格，请用户输入一个商品价格，如果价格>6888，说明涨价了
+    var price = prompt("请输入商品价格：");
+    var isExp = price > 6888;
+    var isCheap = price < 6888;
+    console.log("商品涨价了吗？"+isExp);
+    console.log("商品降价了吗？"+isCheap);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 页面中弹出一个输入提示框，读取一个文本输入，控制台中输出他是“一个英文字符”吗？是
+    // 一个数字”吗？是“一个汉字”吗？
+    // 思路:通过字符在Unicode的编码范围来判断，两个字符比较的时候就是用Unicode编码来判断的。
+    // var input = prompt("请输入一个字符：");
+    // var isNum = input >= "0" && input <= "9";
+    // var isAlp = input >= "a" && input <= "z" || input >= "A" && input <= "Z";
+    // var isHanz = input >= "\u4e00" && input <= "\u9fa5";
+    // console.log("是一个英文字符吗？"+isAlp);
+    // console.log("是一个数字吗？"+isNum);
+    // console.log("是一个汉字吗？"+isHanz);
+  </script>
+
+
+  <script>
+    // 页面中弹出一个输入提示框，接收用户输入的一个数字表示年份，控制台中输出这个年份是否为闰年
+    var year = prompt("请输入一个年份：");
+    var isLeapYear = (year%4==0) && (year%100!=0) || (year%400==0);
+    console.log("是闰年？"+isLeapYear);
+  </script>
+</body>
+</html>

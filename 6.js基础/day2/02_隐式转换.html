@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var num = 25;
+    var str = "你好";
+    var boo = true;
+    var und;
+    var result="";
+    //1/num+str=?
+    //隐式转换：将num转换为string
+    result = num + str;
+    console.log("结果为:"+result+"，类型为："+typeof(result));
+    //2、str + boo = ？
+    //隐式转换：将boo转换为string
+    result = str + boo;
+    console.log("结果为："+result+",类型为："+typeof(result));
+    // 3、str + und;
+    //隐式转换：将布尔类型转换为string
+    result = str + und;
+    console.log("结果为："+result+",类型为："+typeof(result));
+    // 4、num + boo;
+    //隐式转换：将布尔类型转换为num
+    result = num + boo;
+    console.log("结果为："+result+",类型为："+typeof(result));
+    // 5、num + und = NaN;
+    //隐式转换:尝试将undefinded类型转换为num，结果，转换失败，结果为NaN（Not a Number）
+    result = num + und;
+    console.log("结果为："+result+",类型为："+typeof(result));
+    
+    // isNaN判断的是里面的值是否为数字，与数据类型没关系
+    num = 24;
+    var result = isNaN(num);
+    console.log(result)
+
+    str = "24";
+    var result = isNaN(str);
+    console.log(result)
+    
+    str = "24a";
+    var result = isNaN(str);
+    console.log(result)
+
+
+    // 5、boo + und = NaN;
+    //隐式转换:尝试将undefinded类型及布尔类型转换为num，结果，转换失败，结果为NaN（Not a Number）
+    result = boo + und;
+    console.log("结果为："+result+",类型为："+typeof(result));
+  </script>
+</body>
+</html>

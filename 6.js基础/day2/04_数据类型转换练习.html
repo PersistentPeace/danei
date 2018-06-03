@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 弹出一个输入提示框，请用户输入工资
+    var salary = prompt("请输入您的工资");
+    console.log("用户工资为:"+ salary);
+    // 将用户输入的工资+1000，再弹出提示，显示涨工资后的结果
+    var salary = salary + 1000;
+    alert("涨工资的结果为" + salary);
+    // 注释上一行代码后，使用typeof函数检查用户输入的工资的数据类型
+    var result = typeof(salary);
+    console.log(result);
+    // 尝试将用户输入的工资解析为一个整数，在重复执行上一步程序，观察结果；
+    salary = Number(salary) + 1000;
+    console.log(salary);
+  </script>
+</body>
+</html>

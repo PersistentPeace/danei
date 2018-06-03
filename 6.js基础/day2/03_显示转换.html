@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var str = "25";
+    // var num = 25;
+    // console.log(str+num)
+    // parseInt
+    var str = "25";
+    var result = parseInt(str);
+    // 结果为
+    console.log(result);
+    // 数据类型为
+    console.log(typeof(result));
+
+
+    var str = "25abc";
+    var result = parseInt(str);
+    console.log(result);
+    // 结果为25，说明只把25转化了
+    console.log(typeof(result));
+    // 数据类型为number
+
+
+    var str = "abc25";
+    var result = parseInt(str);
+    console.log(result);
+    // 结果为NaN
+    console.log(typeof(result));
+    // 数据类型为number
+     
+     var num = 24.234;
+     console.log(num);
+    //  结果为24
+    //  以上说明parseInt(数据)：将数据转换成number类型（整数）
+    //  碰到第一个非整数字符，则停止转换★★
+
+    // parseFloat转换函数
+    var str = "123.456";
+    var result = parseFloat(str);
+    console.log(result);
+    console.log(typeof(result));
+
+    var str = "123.456abc";
+    var result = parseFloat(str);
+    console.log(result);
+    // 结果为123.456
+    console.log(typeof(result));
+    // 数据类型为number
+
+    var str = "abc123.456";
+    var result = parseFloat(str);
+    console.log(result);
+    // 结果为NaN
+    console.log(typeof(result));
+    // 数据类型为number
+    
+    var str = "123.";
+    var result = parseFloat(str);
+    console.log(result);
+    // 结果为123，所以小数后面没有数字，就当整数看
+    console.log(typeof(result));
+    // 数据类型为number
+      
+    var str = ".123";
+    var result = parseFloat(str);
+    console.log(result);
+    // 结果为0.123
+    console.log(typeof(result));
+    // 数据类型为number
+    
+    
+  </script>
+</body>
+</html>

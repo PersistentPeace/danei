@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 价格打折，充值>100元，则金额打八折 -->
+  <!-- <script>
+    var price=prompt("请输入金额：");
+    price>=100 && console.log("您的金额以超过100，可以打八折"),price=price*0.8;
+    // 注意，多个执行语句时，中间以逗号隔开。
+    console.log("应收："+price);
+  </script> -->
+
+  <!-- 留言判断 -->
+  <script>
+    // 请用户输入一段留言：如果输入了，就输入留言的内容，否则就输出“主任很懒，什么也没留下”
+    // 空字符串会当false使用
+    // 能当false作为运算的数据：""  0  0.0  undefined
+    var msg=prompt("请输入一段话：");
+    var result = msg || ("主人很懒，什么都没有留下");
+    console.log(result);
+
+  </script>
+</body>
+</html>

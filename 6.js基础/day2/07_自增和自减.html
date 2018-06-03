@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ++作为后缀：先使用，在自增
+    var num = 5;
+    console.log(num++);
+    // 由于++是作为后缀，所以要先使用变量的值，配合当前行进行操作，然后在自增,所以这里的结果是5
+    console.log(num);
+    // 现在的结果是6
+
+    // ++作为前缀：先自增，在使用
+    var salary = 5999;
+    console.log(++salary);
+
+    var sun = 5;
+    var n = sun++;
+    // 先使用，在自增，所以在使用++做后缀的时候，先不要管++是什么意思，结合当前行，先用了在说，用完了以后再给这值加1。
+    console.log("num:" + num);
+    // 结果为6
+    console.log("n:" + n);
+    // 结果为5
+
+    // 用的最多的情况
+    var day = 4;
+    day++;
+    // 由有这里没有其他的 操作，所以就直接加一
+    console.log(day);
+    // 结果为5
+
+    var num = 5;
+    var result = num++ + ++num + ++num + num++;
+              // 5(6)     (7)7    (8)8    8(9)
+    console.log("result:" + result);
+    // 结果为28
+    console.log("num:" + num);
+    // 结果为9
+  </script>
+</body>
+</html>

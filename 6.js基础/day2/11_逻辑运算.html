@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    var bi = prompt("请输入笔试成绩：");
+    var mian = prompt("请输入面试成绩：");
+    var passBi = bi >= 60;
+    var passMain = mian >= 60;
+    // 逻辑与
+    // var isPass = passBi&&passMain;
+    // console.log("能够入职？"+isPass);
+
+    // 逻辑或
+    var isPass = passBi||passMain;
+    console.log('能够入职？'+isPass);
+  </script>
+</body>
+</html>

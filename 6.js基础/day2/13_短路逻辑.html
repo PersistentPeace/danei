@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 短路逻辑，第一个表达式就不满足
+    var num1 = 20;
+    var num2 = 21;
+    // 判断num1是否大于num2，如果大于，则输出“num1>num2”
+    var result = num1>num2 && (console.log("num1>num2"));
+    // 结果为false
+
+    // 如果是：
+    var num1 = 20;
+    var num2 = 10;
+    var result = num1>num2 &&(console.log("num1>num2"))
+    // 结果就会打印出num1>num2
+    console.log(result);
+    // 结果为undefined，因为console.log("num1>num2")这句话不是条件判断，是没有值的，但是短路逻辑在第一个条件为true的情况下，将第二条件的值赋值给result。但是现在是一个执行语句，所以值为undefined。
+    
+  </script>
+</body>
+</html>
