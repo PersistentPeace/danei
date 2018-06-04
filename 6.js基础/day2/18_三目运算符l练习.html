@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var salary = prompt("请输入您的工资：");
+    var result = salary>=20000?"高工资":(salary>=8000?"中高工资":"普通工资");
+    console.log(result);
+
+    var weight = prompt("请输入您的体重：");
+    var height = prompt("请输入您的升高：");
+    var bmi = weight/(height*height);
+    var result = bmi>25?"偏胖":(bmi>20?"正常":"偏瘦");
+    console.log(result);
+  </script>
+</body>
+</html>
