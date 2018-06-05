@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 制作一个函数calAge，函数中要求用户从弹框中输入一个年龄，计算并返回10年后的年龄
+    function calAge(){
+      var age = prompt("请输入您的年龄：");
+      age = Number(age);  
+      age += 10;
+      return age;
+    }
+
+    // 创建一个函数，函数体内调用calAge函数，并打印输出其返回值；
+    function testCalAge(){
+      var result = calAge();
+      console.log(result);
+    }
+  </script>
+  <button onclick="testCalAge();">计算10年后的成绩</button>
+</body>
+</html>

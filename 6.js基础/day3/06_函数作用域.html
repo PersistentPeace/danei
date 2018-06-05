@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var testGlobal="hello"
+    function test(){
+      // 全局污染
+      global = "声明在test函数内的全局变量";
+      var num1 = 15;
+      var num2 = 18;
+      console.log(testGlobal);
+    }
+    // console.log(num1);
+    // console.log(num2);
+    console.log(testGlobal);
+    function test2(){
+      console.log(global);
+    }
+    
+    // 测试声明提前
+    function test3(){
+      // 声明提前，会将msg的声明预读到test3函数的最顶端，但是不会赋值，赋值还是保留在原位置
+      // 相当于var msg;下面才赋值
+      console.log(msg);
+      console.log("普通文本");
+      console.log("测试声明提前的效果");
+      var msg="这是测试文本！";
+      // msg="这是测试文本！";
+      console.log("msg");
+    }
+  </script>
+  <button onclick="test();">test</button>
+  <button onclick="test2();">test2</button>
+  <!-- 点击之后会报错，因为global是在test（）里面的，至少要调用一次test()才能使用里面的内容 -->
+
+  <!-- 测试声明提前 -->
+  <button onclick="test3()">测试声明提前</button>
+</body>
+</html>

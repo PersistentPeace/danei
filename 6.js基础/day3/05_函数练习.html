@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function num(num1,num2){
+    //   var num1 = prompt("请输入第一个数：");
+    //   var num2 = prompt("请输入第二个数：");
+    //   n1 = Number(num1);
+    //   n2 = Number(num2);
+    //   var result = n1 + n2;
+    //   console.log(result);
+    // }
+
+    // 定义一个可以接受三个number的方法，返回三个number中的最大值
+    function num(n1,n2,n3){
+      Number(n1,n2,n3);
+      var max;
+      n1 > n2? max=n1 : max=n2; 
+      max > n3? max=n2 :max=n3;
+      console.log(max);
+    }
+    
+    // 比较三个数字的大小并输出
+    function sort(x,y,z){
+      x<y && (x^=y,y^=x,x^=y);
+      y<z && (y^=z,z^=y,y^=z);
+      x<y && (x^=y,y^=x,x^=y);
+      console.log(x,y,z);
+    }
+  </script>
+  <button onclick="num(5,10,15);">点我</button>
+  <button onclick="sort(1,2,3);">排序</button>
+</body>
+</html>

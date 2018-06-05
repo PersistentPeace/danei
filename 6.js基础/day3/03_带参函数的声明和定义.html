@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 定义一个函数，计算三个数字的和
+    function sum(n1,n2,n3){
+      console.log("第一个数字："+n1);
+      console.log("第二个数字："+n2);
+      console.log("第三个数字："+n3);
+    // 计算三个数字的和
+      var sum = n1 + n2 + n3;
+      console.log("三个数字的和为："+ sum);
+    }
+
+    function play(name1,action,name2){
+      console.log(name1 + action + name2);
+    }
+  </script>
+  <button onclick="sum(12,25,38);">点我</button>
+
+  <!-- 注意，这里不传参数 -->
+  <button onclick="sum();">调用带参函数（不传参）</button>
+  <!-- 结果可见，三个数字的都是undefined，结果为NaN -->
+
+  <!-- 如果只给一个参数 -->
+  <button onclick="sum(12);">调用带参函数（不传参）</button>
+  <!-- n1为12，n2、n3为undefined，结果为NaN -->
+
+  <button onclick="play('小明','吃','饭')">拼字符</button>
+</body>
+</html>
