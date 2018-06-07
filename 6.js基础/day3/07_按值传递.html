@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function change(num1,num2){
+      num1 = 100;
+      num2 = 200;
+      console.log("在函数中");
+      console.log(num1,num2);
+    }
+
+    function testChange(){
+      var num1 = 10;
+      var num2 = 20;
+      console.log("交换前：");
+      console.log(num1,num2);
+      // 这个时候传递的num1和num2是10和20的副本
+      // 原始的10和20没有动  
+      change(num1,num2);
+      console.log("交换后：");
+      console.log(num1,num2);
+      // 这个打印的结果为10，20，说明往change函数里面传递的是10和20的副本。对num1和num2本身没有影响。
+    }
+  </script>
+    <button onclick="testChange();">按值传递</button>
+</body>
+</html>

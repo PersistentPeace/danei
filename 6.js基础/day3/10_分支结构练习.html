@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 收银柜台收款程序v1.0
+    // 编写一个收银柜台收款程序，根据商品单价、购买数量以及收款节计算并输出应收金额和找零
+    function getMoney(){
+    // 分析：
+    // a、定义输入：单价(price)、数量(count)金额(money)
+    var price,count,money;
+    // b、定义输出：应收金额(total)、找零(change);
+    var total,change;
+    // c、以弹框的方式为商品单价和商品数量赋值
+    price = prompt("请输入商品单价");
+    count = prompt("请输入购买数量：");
+    // d、计算商品总价,并打印输出
+    total = price * count;
+    console.log("您一共消费："+total);
+    // e、以弹框的方式，为收款金额赋值
+    money = prompt("掏钱：");
+    // f、计算 找零打印输出
+    change = money - total;
+    console.log("找零："+change+"元");
+    }
+  </script>
+  <button onclick="getMoney();">付钱</button>;
+</body>
+</html>

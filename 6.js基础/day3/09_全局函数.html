@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function testGlobalFun(){
+      var msg = "https://www.baidu.com/s?wd=减肥";
+      console.log(msg);
+      // 通过encodeURI函数对msg进行编码
+      // 因为URI里面不允许有中文，所以，会对"减肥"进行编码
+      var new_msg = encodeURI(msg);
+      console.log(new_msg);
+      // 通过decodeURI函数对以编码的内容进行解码
+      var msg_old = decodeURI(new_msg);
+      console.log(msg_old);
+
+
+      var num = 25;
+      // 判断num是否具备有限值
+      console.log(isFinite(num));
+    }
+
+    // eval()计算并执行以字符串表示的js代码
+    function testEval(){
+      var msg = prompt("请输入一段js代码：");
+      // 使用eval函数执行msg中的内容
+      eval(msg);
+    }
+  </script>
+  <button onclick="testEval();">执行Eval</button>
+</body>
+</html>

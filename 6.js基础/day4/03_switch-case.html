@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function printMenu(){
+      //1、要求用户从弹框中录入星期几
+      var date = Number(prompt("今天星期几"));
+      //2、用用户输入的数据做等值判断
+      //1:红烧肉 2：狮子头 3：牛肉炖牛肉 4：柿子炖牛肉 5：番茄炖牛肉 6：休息 7：休息其他：输入有误
+      switch(date){
+        case 1:
+          console.log("星期一：红烧肉");
+          break;   //注意，break不是必须要有,break 的作用是有break，这句就执行结束了，运行不了了    
+        case 2:
+          console.log("星期二：狮子头");
+          break;
+        case 3:
+          console.log("星期三：牛肉炖牛肉");
+          break;
+        case 4:
+          console.log("星期三：牛肉炖式子");
+          break;
+        case 5:
+          console.log("星期五：番茄炖牛肉");
+          break;
+          // 采用直落的形式
+        case 6:
+        case 7:
+          console.log("休息");
+          break;
+        default:
+          console.log("输入有误");
+      }
+    }
+  </script>
+  <button onclick="printMenu();">打印食堂菜谱</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 收银柜台收款程序v1.0
+    // 编写一个收银柜台收款程序，根据商品单价、购买数量以及收款节计算并输出应收金额和找零
+    // 2.0增加功能：判断如果消费总额 大于或等于500时，则总价打八折。
+    // 判断收款金额是否大于或等于应收金额，如果满足，则输出找零，否则提示错误。
+    function getMoney(){
+      // 分析：
+      // a、定义输入：单价(price)、数量(count)金额(money)
+      var price,count,money;
+      // b、定义输出：应收金额(total)、找零(change);
+      var total,change;
+      // c、以弹框的方式为商品单价和商品数量赋值
+      price = prompt("请输入商品单价");
+      count = prompt("请输入购买数量：");
+      // d、计算商品总价,并打印输出
+      total = price * count;
+      // 插入：判断total是否大于等于500，如果条件满足，则打八折。
+      if(total>=500){
+        // 注意，这里如果去掉大括号的话，if只会执行第一条语句，其他的就不归if管了。
+        console.log("您消费已超过500元，可享受8折优惠")
+        total= total * 0.8;
+        // 或者写为：total*= 0.8; 
+      }
+      console.log("您一共消费："+total);
+      // e、以弹框的方式，为收款金额赋值
+      money = prompt("掏钱：");
+      // 判断total和money之间的关系
+      if (money>=total){
+        change = money - total;
+        console.log("找零："+change+"元");
+      }else{
+        console.log("钱不够");
+      }
+    }
+    // f、计算 找零打印输出
+  </script>
+  <button onclick="getMoney();">付钱</button> 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getScore(){
+      // 1、请输入一个考试成绩
+      var score = prompt("请输入一个考试成绩");
+      // 2、根据成绩判断所在区间范围并提示A~E的登记
+      if(score==100){
+        console.log("A");
+      }
+      if(score>=90){
+        console.log( "B");
+      }
+      if(score>=80){
+        console.log("C");
+      }
+      if(score>=60){
+        console.log("D");
+      }else{
+        console.log("E")
+      } 
+      // 这样写是独立的if结构，每个if都要走一遍
+    }
+    function getScore2(){
+      var score = prompt("请输入一个成绩");
+      if(score == 100){
+        console.log("A");
+      }else if(score >= 90){
+        console.log("B")
+      }else if(score >= 80){
+        console.log("C");
+      }else if(score >= 60){
+        console.log("D");
+      }else{
+        console.log("E");
+      }
+    }
+  </script>
+  <button onclick="getScore();">测试考试成绩</button>
+  <button onclick="getScore2();">测试考试成绩2</button>
+</body>
+</html>

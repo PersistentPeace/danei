@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getTotalDays(){
+      var year = Number(prompt("输入年："));
+      var month = Number(prompt("输入月："));
+      var day = Number(prompt("输入日：")); 
+      var totalDays = 0//;记录总天数
+      if(month == 1){
+        totalDays = day;
+      }else if(month == 2){
+        totalDays = 31 + day;
+      }else if(month == 3){
+        totalDays = 31 + 28 + day;
+      }else if(month == 4){
+        totalDays = 31 + 28 + 31 + day;
+      }else if(month == 5){
+        totalDays = 31 + 28 + 31 + 30 + day;
+      }else if(month == 6){
+        totalDays = 31 + 28 + 31 + 30 + 31 + day;
+      }else if(month == 7){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + day;
+      }else if(month == 8){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + 31 + day;
+      }else if(month == 9){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + day;
+      }else if(month == 10){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + day;
+      }else if(month == 11){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + day;
+      }else if(month == 12){
+        totalDays = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + day;
+      }
+      // 判断是否为闰年, 当不是1月和2月的时候，如果是闰年，totalDays += 1 
+      if(month!=1 && month!=2){
+        if(year%4==0 && year%100!=0 || year%400==0){
+          totalDays += 1
+        } 
+      }
+      console.log(year+"年"+month+"月"+day+"日是"+year+"年的第"+totalDays+"天");  
+    }
+  </script>
+  <button onclick="getTotalDays();">获取总天数</button>
+</body>
+</html>

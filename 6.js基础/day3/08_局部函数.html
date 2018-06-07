@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function testFunction(){
+      console.log("测试局部函数");
+      function innerFunction(){
+        console.log("这是局部函数，只能在testFunction中才能被调用");
+      }
+      innerFunction();
+    }
+  </script>
+  <button onclick="innerFunction();">这是一个测试函数</button>
+  <!-- 这样结果会报错。因为他是局部函数 -->
+  <button onclick="testFunction();">测试局部函数</button>
+
+</body>
+</html>
