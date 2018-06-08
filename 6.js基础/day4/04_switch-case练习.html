@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 模拟电话银行按键程序 -->
+  <!-- 分别定义4个函数，模拟执行查询余额、取款、转账、退出系统四个功能 -->
+  <!-- 定义一个电话银行函数，接受一个整数参数，根据参数值的不同，执行不同的子函数 
+  - 输入1，执行查询余额函数，输出“余额查询中
+  - 输入2，执行取款函数，输出“取款进行中”
+  - 输入3，执行转账函数，输出“转账进行中”
+  - 输入0，执行退出函数，输出“退出系统，谢谢使用”-->
+  <!-- 假设历史系统维护中，取款功能和转账功能暂时不能用，统一输出"系统维护中。。" -->
+  <script>
+    function bank(){
+      var num = Number(prompt("===欢迎使用电话银行系统===\n查询请按1\n取款请按2\n转账请按3\n退出请按0"));
+      switch(num){
+        case 1:
+          console.log("正在查询，请稍后");
+          break
+        case 2:
+          console.log("正在取款，请稍后");
+          break
+        case 3:
+          console.log("正在转账，请稍后");
+          break
+        case 0:
+          console.log("正在退出，请稍后");
+          break
+        default:
+          console.log("您的输入有误，请重新输入")
+      }
+    }
+    // 还有一种完全用函数的写法
+    function  getMoney(){
+      alert("取款进行中，请稍后。。。");
+    }
+    function transfer(){
+      alert("转账进行中，请稍后。。。");
+    }
+    function query(){
+      alert("查询进行中，请稍后。。。");
+    }
+    function exit(){
+      alert("欢迎使用");
+    }
+    function weihu(){
+      alert("系统维护中...");
+    }
+    function userError(){
+      alert("您的操作有误");
+    }
+    // 菜单选择：根据用户传递进来的数据调用不同的函数 
+    function meum(choice){
+      switch(choice){
+        case 1:
+          query()
+          break
+        case 2:
+          getMoney()
+          break
+        case 3:
+          transfer()
+          break
+        case 0:
+          exit()
+          break
+        default:
+          userError()
+          break
+      }
+    }
+    // 显示菜单，并让用户输入
+    function welcome(){
+      var meum1 ="==欢迎使用电话银行系统==\n查询请按1\n取款请按2\n转账请按3\n退出请按0";
+      var choice = Number(prompt(meum1));
+      meum(choice);
+    }
+
+  </script>
+  <button onclick="bank()">银行电话系统</button>
+  <button onclick="welcome();">电话银行系统</button>
+</body>
+</html>

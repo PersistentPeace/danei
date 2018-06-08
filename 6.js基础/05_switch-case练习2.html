@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function calDate(){
+      var year = Number(prompt("输入年："));
+      var month = Number(prompt("输入月："));
+      var day = Number(prompt("输入日：")); 
+      var totalDays = 0//;记录总天数
+      switch(month-1){
+        // month-1表示计算当前月之前所有月的天数
+        case 11:
+          totalDays += 30;  
+        case 10:
+          totalDays += 31;
+        case 9:
+          totalDays += 30;
+        case 8:
+          totalDays += 31;
+        case 7:
+          totalDays += 31;
+        case 6:
+          totalDays += 30;
+        case 5:
+          totalDays += 31;
+        case 4:
+          totalDays += 30;
+        case 3:
+          totalDays += 31;
+        case 2:
+          totalDays += 28;
+          if(year%4==0 && year%100!=0 || year%400==0){
+            totalDays += 1
+          } 
+        case 1:
+          totalDays += 31;
+      }
+      totalDays += day;
+      console.log(totalDays); 
+     }
+  </script>
+  <button onclick="calDate();">获取总天数</button>
+</body>
+</html>
