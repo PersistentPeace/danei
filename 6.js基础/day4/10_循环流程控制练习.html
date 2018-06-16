@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 猜数字v1.0 -->
+  <!--
+  程序随机生成或任意存储一个0~9范围内的整数
+  用户输入一个整数，
+  若比生成的随机数字大则在控制台上输出“猜大了”
+  若比生成的随机数字小则在控制台上输出“猜小了”
+  直到用户猜对数字为止；
+  输入“exit” 则退出游戏
+  输入范围外的字符，提示“输入有误”-->
+  <script>
+    function guess(){
+      //1、 生成一个随机数（0-100)
+      Math.random()//会返回一个0-1之间小数,不会取到1
+      var r = Math.random()
+      r = (r*100) | 0 //将小数点向右移动两位，并取整
+      //循环内：
+      // 1、条件：无限次数 a、用户输入exit b、用户猜对
+      while(true){
+        var input = Number(prompt("请输入一个数字"))
+        if(input=="exit"){
+          alert("您即将退出程序")
+          break
+        }else if(input>r){
+          alert("您输入的数字大了")
+        }else if(input<r){
+          alert("您输入的数字小了")
+        }else if(input == r){
+          alert("恭喜您输入正确")
+          break
+        }
+      }
+    }
+      // 2、操作：让用户输入一个数字，
+            // a、判断输入的数据（input） 是否为exit，如果是，则退出循环
+            // b、不是退出的话，判断input>r则提示大了，input<r，则提示小了。否则提示用户猜对了，退出游戏
+  </script>
+  <button onclick="guess()">猜数字游戏1.0</button>
+</body>
+</html>

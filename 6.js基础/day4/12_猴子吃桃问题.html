@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 猴子吃桃问题 -->
+  <!-- 猴子摘下若干个桃子， 当即吃掉一般，又多吃一个。第二天，又将剩下的桃子吃了一半又多吃了一个，以后每天都吃前一天剩下的一半零一个。第十天的时候，桃子只剩下一个。问第一天摘下了多少个桃子 -->
+    <script>
+      function num(){
+        var i = 10
+        var sum = 1
+        while(i>0){
+          console.log('第'+i+"天的桃子有"+sum+"个")
+          sum = (sum+1) * 2
+          i--
+        }
+      }
+    </script>
+    <button onclick="num()">猴子吃桃问题</button>
+</body>
+</html>

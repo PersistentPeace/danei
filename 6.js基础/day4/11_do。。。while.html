@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function printMsg(){
+      // 先让用户输入一个数据，如果是exit则给出提示并且退出，否则打印录入的数据并继续录入
+      do{
+        var msg = prompt("输入一个数据")
+        if(msg=="exit"){
+          alert("退出")
+        }else{
+          console.log( msg)
+        }
+      }while(msg!='exit');
+    }
+  </script>
+  <button onclick="printMsg()">循环录入数据</button>
+</body>
+</html>
