@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function printNum(){
+      // 循环条件：从第一遍开始，到1000遍结束
+      var i = 1
+      /*循环操作:将循环条件变量打印输出，
+      ，更新循环变量*/
+      while(i<=1000){
+        console.log(i)
+        i++
+      }
+    }
+    //打印1-1000之间所有的数字之和
+    function printNumSum(){
+      var i = 1
+      var a = 0 //注意，不能写在while里面
+      // 循环操作：将循环条件值进行累加，更新循环变量   
+      while(i<=1000){
+        a += i
+        i++ 
+      }
+      console.log(a)
+    }
+
+    //计算1-1000之间所有奇数数字之和
+    function printOddNumSum(){
+      var i = 1 
+      var a = 0
+      /* 方案1
+      while(i<=1000){
+        if(i%2==1){
+          a += i
+        }
+        i++
+      }*/
+     //方案2：让i以奇数的方式变化
+      while(i<=1000){
+        a += i
+        i += 2
+      }
+      console.log(a)
+    }
+  </script>
+  <button onclick="printNum()">打印1-1000之间的数</button>
+  <button onclick="printNumSum()">打印1-1000之间的数字之和</button>
+  <button onclick="printOddNumSum()">打印1-1000之间所有的奇数数字之和</button>
+
+</body>
+</html>

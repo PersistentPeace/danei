@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 条件：从368开始，到1000结束
+    function printNum(){
+      var i = 368
+    // 操作：打印每个数字，但碰到第一个是5的倍数的数字则停止打印
+      while(i<=1000){
+        if(i%5==0){
+          console.log('i是5的倍数')
+          break
+        }
+        console.log(i)
+        i++
+      }
+    }
+
+
+    // 要求用户从弹框中反复录入数据，并打印输出，直到输入exit为止
+    function printInput(){
+      // 条件：输入exit 退出
+      // 操作：要求用户录入数据，不是的话在打印输出
+      while(true){
+        var inp = prompt("请随便输入")
+        if(inp=="exit"){
+          console.log('您输入的是exit，退出循环')
+          break
+        }
+        console.log(inp)
+      }
+    }
+    // 第二种写法
+    function printInput2(){
+      var input
+      while((input=prompt('输入内容'))!= 'exit'){
+        console.log(input)
+      }
+      console.log('退出程序')
+    }
+  </script>
+  <button onclick="printNum()">答应368到1000之间的数字</button>
+  <button onclick="printInput()">退出循环的操作 </button>
+  <button onclick="printInput2()">退出循环的操作2</button>
+</body>
+</html>

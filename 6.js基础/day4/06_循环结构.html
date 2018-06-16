@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1、创建一个函数，打印输出一句hello world
+    /*2、 打印十遍hello world
+      条件：从第一遍开始到第十遍结束
+      操作：打印hello world*/
+    /* 3、打印1000遍hello world
+     更新玄幻条件即可，由10遍变成1000遍*/
+    function printHello(){
+      var i = 1 //i是一个计数器记录循环次数
+      while(i <= 1000){
+        console.log("第"+i+"遍hello world")
+        // 更新计数器的值，否则就是死循环
+        i++//i += 1;i = i+1都是一样的操作
+      }
+    }
+  </script>
+  <button onclick="printHello()">执行循环</button>
+</body>
+</html>

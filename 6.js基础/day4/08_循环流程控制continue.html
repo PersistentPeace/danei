@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <!-- 打印1-1000之间非3倍数的数字 -->
+    <script>
+      function fun1(){
+        // 循环条件：从1开始，1000结束
+        var i = 1
+        // 循环操作：碰到3的倍数跳过，否则打印输出
+        while(i<=1000){
+          /*方案1
+          if(i%3==0){
+            i++//很重要！！否则是个死循环
+            continue
+          }
+          console.log(i)
+          i++
+        }*/
+        //方案2
+          if(i%3!=0){
+            console.log(i)
+          }
+          i++
+        }
+      }
+    </script>
+    <button onclick="fun1()">打印1-1000之间非3倍数的数字</button>
+</body>
+</html>

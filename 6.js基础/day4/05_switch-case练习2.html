@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function calDate(){
+      var year = Number(prompt("输入年："));
+      var month = Number(prompt("输入月："));
+      var day = Number(prompt("输入日：")); 
+      var totalDays = 0//;记录总天数
+      switch(month-1){
+        // month-1表示计算当前月之前所有月的天数
+        case 11:
+          totalDays += 30;  
+        case 10:
+          totalDays += 31;
+        case 9:
+          totalDays += 30;
+        case 8:
+          totalDays += 31;
+        case 7:
+          totalDays += 31;
+        case 6:
+          totalDays += 30;
+        case 5:
+          totalDays += 31;
+        case 4:
+          totalDays += 30;
+        case 3:
+          totalDays += 31;
+        case 2:
+          totalDays += 28;
+          if(year%4==0 && year%100!=0 || year%400==0){
+            totalDays += 1
+          } 
+        case 1:
+          totalDays += 31;
+      }
+      totalDays += day;
+      console.log(totalDays); 
+     }
+    //  用循环来做：
+     function calDate1(){
+      var year = Number(prompt("输入年："));
+      var month = Number(prompt("输入月："));
+      var day = Number(prompt("输入日：")); 
+      var totalDays = 0//;记录总天数
+        // 循环累加当前月份之前所有月的天数
+        // 条件：从1月开始，到输入月份之前月为止
+        var i = 1
+        // 操作：判断循环出来的是第几月，将该月的天数累加到totaldays的后面
+        while(i<=month-1){
+          switch(i){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+              totalDays += 31;
+              break//就近原则，离switch近，结束的就是switch，如果离while近，结束的就是while
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+              totalDays += 30;
+            case 2:
+              totalDays += 28;
+              if(year%4==0 && year%100!=0 || year%400==0){
+                totalDays += 1
+              } 
+              break
+          }
+        i++
+      }
+      totalDays += day;
+      console.log(totalDays); 
+     }
+  </script>
+  <button onclick="calDate1();">获取总天数</button>
+</body>
+</html>
