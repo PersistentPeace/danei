@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function guess(){
+      //1、 生成一个随机数（0-100)
+      Math.random()//会返回一个0-1之间小数,不会取到1
+      var r = Math.random()
+      r = (r*100) | 0 //将小数点向右移动两位，并取整
+      //循环内：
+      // 1、条件：无限次数 a、用户输入exit b、用户猜对
+      do{
+        var input = Number(prompt("请输入一个数字"))
+        if(input=="exit"){
+          alert("您即将退出程序")
+          break
+        }else if(input>r){
+          alert("您输入的数字大了")
+        }else if(input<r){
+          alert("您输入的数字小了")
+        }else if(input == r){
+          alert("恭喜您输入正确")
+          break
+        }
+      }while(input!="exit" && input!=r);
+    }
+  </script>
+  <button onclick="guess()">猜数字游戏1.0</button>
+  
+</body>
+</html>
