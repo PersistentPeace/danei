@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1、打印输出1-1000之间所有的奇数 -->
+  <!-- 2、计算1-1000之间所有偶数的和 -->
+  <script>
+    function odd(){
+      for(var i=1; i<=1000; i++){
+        if(i%2 ==1){
+          console.log(i)
+        }
+      }
+    }
+
+    function even(){
+      var total=0
+      for(var i=1; i<=1000; i++){
+        if(i%2 == 0){
+          total += i
+        }
+      }
+      console.log(total)
+    }
+  </script>
+  <button onclick="odd()">打印输出1-1000之间所有的奇数</button>
+  <button onclick="even()">计算1-1000之间所有偶数的和</button>
+</body>
+</html>
