@@ -20,13 +20,18 @@
 
     function even(){
       var total=0
-      for(var i=1; i<=1000; i++){
+      /*for(var i=1; i<=1000; i++){
         if(i%2 == 0){
           total += i
         }
+      }*/
+    // 这种写法更快：
+      for(var i=2;i<=1000;i+=2){
+        total+=i;
       }
       console.log(total)
     }
+    
   </script>
   <button onclick="odd()">打印输出1-1000之间所有的奇数</button>
   <button onclick="even()">计算1-1000之间所有偶数的和</button>

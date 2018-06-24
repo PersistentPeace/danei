@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+      <!-- 定义一个函数，打印乘法口诀表中的任意一行 -->
+  <script>
+    function math(){
+      var n=prompt("请输入你要打印的行数")
+      for(var i=1;i<=n;i++){
+        console.log(i+"*"+n+"="+i*n)
+      }
+    }
+
+    // 创建一个函数，返回1+1/3+1/5+...+1/999的和
+    function sum(){
+      var total=0;
+      for(var i=1;i<=1000;i+=2){
+        total+=1/i;
+      }
+      console.log(total)
+    }
+  </script>
+
+  <button onclick="math()">按钮</button>
+  <button onclick="sum()">求和</button>
+</body>
+</html>
